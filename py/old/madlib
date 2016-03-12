@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+import colors as c
+from utils import ask
+
+text = '''
+Ad
+Come see and/or try our amazing new product- the {Noun}! Our {Adjective} {Ocupation (Plural)}
+will use our new {Noun} on you and cater to your every need for about {Number}
+{Unit of Time (Plural)}. The location is the new {Building} downtown in {Town}, {State}. There are
+multiple ways of transportaion to get down to the {Building}. You could go on a {Mode of Transportation} or
+on a {Mode of Transportation 1}.
+'''
+
+words = {
+    'Noun' : None,
+    'Adjective' : None,
+    'Ocupation (Plural)' : None,
+    'Number' : None,
+    'Unit of Time (Plural)' : None,
+    'Building' : None,
+    'Town' : None,
+    'State' : None,
+    'Mode of Transportation' : None,
+    'Mode of Transportation 1' : None
+}
+
+print(c.clear + c.green + '''
+Welcome to MadLibs! Enter your answers.
+''')
+
+
+for keyword in words:
+    words[keyword] = ask(keyword + ': ')
+
+print(text.format(**words))
