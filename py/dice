@@ -3,4 +3,8 @@ import skilstak.colors as c
 import random as r
 
 dice = [
-
+ -------                                                                                                                                                                                   
+|       |                                                                                                                                                                                  
+|   o   |                                                                                                                                                                                  
+|       |                                                                                                                                                                                  
+ -------
